@@ -5,6 +5,19 @@
 
 ## Purpose of This Repository
 
+This is a fork from the Armbian Linux Build Framework that builds a customized image, which acts as a UAC 1.0 input to UAC 2.0 output devices.  
+Some devices, such as PS5, can only recognize UAC 1.0 USB sound card, and most highend speakers are using UAC 2.0 protocol, leaving the situation that PS5 cannot use them as output.  
+To build your own image, run:
+
+```
+./compile.sh \
+	BOARD=radxa-zero3 \
+	RELEASE=noble \
+	BRANCH=current \
+	KERNEL_CONFIGURE=no \
+	BUILD_MINIMAL=yes
+```
+
 The **Armbian Linux Build Framework** creates customizable OS images based on **Debian** or **Ubuntu** for **single-board computers (SBCs)** and embedded devices.
 
 It builds a complete Linux system including kernel, bootloader, and root filesystem, giving you control over versions, configuration, firmware, device trees, and system optimizations.
